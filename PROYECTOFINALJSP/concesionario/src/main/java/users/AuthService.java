@@ -45,7 +45,7 @@ public class AuthService implements AuthInterface{
     }
 
     @Override
-    public User register(String username, String name, String surname, String password) throws SQLException {
+    public User register(String name, String surname,String username, String password) throws SQLException {
         
         Statement statement = this.conn.createStatement();    
         String sql = String.format("INSERT INTO users (name, surname, username, password) VALUES ('%s', '%s', '%s', '%s')",name, surname, username, password);
